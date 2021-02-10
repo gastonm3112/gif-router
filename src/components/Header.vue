@@ -22,6 +22,9 @@
             >
           </li>
           <li class="nav-item">
+            <router-link class="nav-link" to="/gifs">Gifs</router-link>
+          </li>
+          <li class="nav-item">
             <router-link class="nav-link" to="/About">About</router-link>
           </li>
         </ul>
