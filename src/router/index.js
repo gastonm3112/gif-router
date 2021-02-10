@@ -29,7 +29,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (stickers.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "gifs" */ '../views/Stickers.vue')
+    component: () => import(/* webpackChunkName: "stickers" */ '../views/Stickers.vue')
 
   },
 ]
