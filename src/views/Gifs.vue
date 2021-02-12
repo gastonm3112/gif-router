@@ -1,6 +1,7 @@
 <template>
-  <div id="gifs">
-    <h1>Gifs Routes</h1>
+  <div class="container">
+    <h1 class="text-center">Gifs</h1>
+    <hr />
   </div>
 </template>
 
