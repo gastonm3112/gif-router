@@ -24,7 +24,7 @@ export default {
     this.getGifs();
   },
   methods: {
-    async getGifs(search = "goku") {
+    async getGifs(search = "") {
       const apiKey = "YCZzQAunZxEv7WQPi1WaK0PIZ2wqMDvW";
 
       //Obtiene Gifs desde la API de GIPHY
