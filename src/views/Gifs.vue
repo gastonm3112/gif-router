@@ -29,6 +29,8 @@ export default {
       );
 
       console.log(data);
+      this.gifs = data.data;
+      console.log(this.gifs);
     },
   },
 };
