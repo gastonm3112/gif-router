@@ -3,7 +3,7 @@
     <h1 class="text-center">Gifs</h1>
     <search @petition="getGifs" />
     <hr />
-
+    <loading />
     <div class="row">
       <div class="col-sm-12" v-for="gif in gifs" :key="gif.id">
         <gif-card :data="gif" class="m-3 w-75" />
@@ -13,10 +13,11 @@
 </template>
 
 <script>
+import Loading from "../components/Loading.vue";
 import GifCard from "../components/GifCard.vue";
 import Search from "../components/Search.vue";
 export default {
-  components: { GifCard, Search },
+  components: { GifCard, Search, Loading },
   data: () => ({
     gifs: {},
   }),
