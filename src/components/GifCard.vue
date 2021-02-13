@@ -1,6 +1,7 @@
 <template>
   <div class="card" style="width: 18rem;">
     <img
+      loader="lazy"
       :src="data.images.downsized.url"
       class="card-img-top"
       alt="Gif animado"
