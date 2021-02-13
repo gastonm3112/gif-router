@@ -24,10 +24,12 @@ export default {
     this.getGifs();
   },
   methods: {
-    async getGifs(search) {
+    async getGifs(search = "goku") {
+      const apiKey = "YCZzQAunZxEv7WQPi1WaK0PIZ2wqMDvW";
+
       //Obtiene Gifs desde la API de GIPHY
       const { data } = await this.axios.get(
-        "https://api.giphy.com/v1/gifs/search?q=goku&api_key=YCZzQAunZxEv7WQPi1WaK0PIZ2wqMDvW"
+        `https://api.giphy.com/v1/gifs/search?q=${search}&api_key=${apiKey}`
       );
 
       //console.log(data);
