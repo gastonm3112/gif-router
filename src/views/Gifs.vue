@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1 class="text-center">Gifs</h1>
-    <search />
+    <search @petition="getGifs" />
     <hr />
 
     <div class="row">
@@ -24,17 +24,18 @@ export default {
     this.getGifs();
   },
   methods: {
-    async getGifs() {
+    async getGifs(search) {
       //Obtiene Gifs desde la API de GIPHY
       const { data } = await this.axios.get(
         "https://api.giphy.com/v1/gifs/random?api_key=YCZzQAunZxEv7WQPi1WaK0PIZ2wqMDvW"
       );
 
-      console.log(data);
+      //console.log(data);
 
       this.gifs = data.data; //gifs toma el valor de data
 
       console.log(this.gifs);
+      console.log(search);
     },
   },
 };
