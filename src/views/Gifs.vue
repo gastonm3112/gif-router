@@ -5,7 +5,7 @@
 
     <div class="row">
       <div class="col-sm-12">
-        <gif-card class="m-3 w-75" />
+        <gif-card :data="gifs" class="m-3 w-75" />
       </div>
     </div>
   </div>
@@ -29,7 +29,9 @@ export default {
       );
 
       console.log(data);
-      this.gifs = data.data;
+
+      this.gifs = data.data; //gifs toma el valor de data
+
       console.log(this.gifs);
     },
   },
