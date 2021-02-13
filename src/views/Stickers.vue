@@ -6,7 +6,7 @@
     <loading v-if="loading" />
     <div class="row">
       <div
-        class="col-sm-12 col-lg-3"
+        class="col-sm-12 col-md-4 col-lg-3 d-flex justify-content-center"
         v-for="sticker in stickers"
         :key="sticker.id"
       >
