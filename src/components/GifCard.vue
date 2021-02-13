@@ -1,6 +1,10 @@
 <template>
   <div class="card" style="width: 18rem;">
-    <!-- <img src="..." class="card-img-top" alt="..."> -->
+    <img
+      :src="data.images.downsized.url"
+      class="card-img-top"
+      alt="Gif animado"
+    />
     <div class="card-body">
       <h5 class="card-title">{{ data.title }}</h5>
       <p class="card-text">
