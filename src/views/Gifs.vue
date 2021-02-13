@@ -3,7 +3,7 @@
     <h1 class="text-center">Gifs</h1>
     <search @petition="getGifs" />
     <hr />
-    <loading />
+    <loading v-if="loading" />
     <div class="row">
       <div class="col-sm-12" v-for="gif in gifs" :key="gif.id">
         <gif-card :data="gif" class="m-3 w-75" />
@@ -20,6 +20,7 @@ export default {
   components: { GifCard, Search, Loading },
   data: () => ({
     gifs: {},
+    loading: false,
   }),
   created() {
     this.getGifs();
@@ -27,7 +28,7 @@ export default {
   methods: {
     async getGifs(search = "") {
       const apiKey = "YCZzQAunZxEv7WQPi1WaK0PIZ2wqMDvW";
-
+      this.loading = true;
       //Obtiene Gifs desde la API de GIPHY
       const { data } = await this.axios.get(
         `https://api.giphy.com/v1/gifs/search?q=${search}&api_key=${apiKey}`
@@ -37,6 +38,7 @@ export default {
 
       this.gifs = data.data; //gifs toma el valor de data
 
+      this.loading = false;
       // console.log(this.gifs);
       // console.log(search);
     },
