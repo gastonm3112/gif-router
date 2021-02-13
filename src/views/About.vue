@@ -1,5 +1,15 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <about-card />
   </div>
 </template>
+
+<script>
+import AboutCard from "../components/AboutCard";
+
+export default {
+  components: {
+    AboutCard,
+  },
+};
+</script>
