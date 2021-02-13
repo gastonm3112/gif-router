@@ -23,11 +23,12 @@ export default {
   },
   methods: {
     async getGifs() {
-      const res = await this.axios.get(
+      //Obtiene Gifs desde la API de GIPHY
+      const { data } = await this.axios.get(
         "https://api.giphy.com/v1/gifs/random?api_key=YCZzQAunZxEv7WQPi1WaK0PIZ2wqMDvW"
       );
 
-      console.log(res);
+      console.log(data);
     },
   },
 };
