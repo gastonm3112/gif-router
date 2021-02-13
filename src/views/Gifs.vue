@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <h1 class="text-center">Gifs</h1>
+    <search />
     <hr />
 
     <div class="row">
@@ -13,8 +14,9 @@
 
 <script>
 import GifCard from "../components/GifCard.vue";
+import Search from "../components/Search.vue";
 export default {
-  components: { GifCard },
+  components: { GifCard, Search },
   data: () => ({
     gifs: {},
   }),
