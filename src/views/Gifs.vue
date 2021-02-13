@@ -5,7 +5,11 @@
     <hr />
     <loading v-if="loading" />
     <div class="row">
-      <div class="col-sm-12 col-lg-3" v-for="gif in gifs" :key="gif.id">
+      <div
+        class="col-sm-12 col-md-4 col-lg-3 d-flex justify-content-center"
+        v-for="gif in gifs"
+        :key="gif.id"
+      >
         <gif-card :data="gif" class="m-3 w-75" />
       </div>
     </div>
