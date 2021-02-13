@@ -28,19 +28,17 @@ export default {
   methods: {
     async getGifs(search = "") {
       const apiKey = "YCZzQAunZxEv7WQPi1WaK0PIZ2wqMDvW";
+
       this.loading = true;
+
       //Obtiene Gifs desde la API de GIPHY
       const { data } = await this.axios.get(
         `https://api.giphy.com/v1/gifs/search?q=${search}&api_key=${apiKey}`
       );
 
-      //console.log(data);
-
       this.gifs = data.data; //gifs toma el valor de data
 
       this.loading = false;
-      // console.log(this.gifs);
-      // console.log(search);
     },
   },
 };
