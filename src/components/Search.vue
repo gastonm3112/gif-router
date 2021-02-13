@@ -1,5 +1,5 @@
 <template>
-  <form>
+  <form @submit.prevent="handlePetition">
     <div class="mb-3">
       <label for="categoria" class="form-label">Categoría</label>
       <input
@@ -14,7 +14,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    handlePetition() {
+      this.$emit("petition");
+    },
+  },
+};
 </script>
 
 <style></style>
