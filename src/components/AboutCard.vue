@@ -1,15 +1,24 @@
 <template>
   <div class="container mt-3">
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 100%;">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+        <h5 class="card-title">Sobre este Proyecto</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Hecho por Gastón Martinez</h6>
         <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          En este Proyecto reforce conocimientos de Vue 3, como Rutas, Views,
+          Componentes, Consumo de APIS, todo fue maquetado con Bootstrap para
+          cierta facilidad. Pueden buscar Gifs y Stickers en esta App, he
+          utilizado la API de GIPHY, espero sea de su agrado.
         </p>
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
+        <a
+          href="https://www.linkedin.com/in/gast%C3%B3n-martinez-a2189a1a2/"
+          class="card-link"
+          target="_blank"
+          >Linkedin</a
+        >
+        <a href="https://portafolio-gm.ml/" class="card-link" target="_blank"
+          >Portafolio Dinámico</a
+        >
       </div>
     </div>
   </div>
