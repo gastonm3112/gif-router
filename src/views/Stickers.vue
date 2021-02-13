@@ -5,8 +5,12 @@
     <hr />
     <loading v-if="loading" />
     <div class="row">
-      <div class="col-sm-12 col-lg-3" v-for="gif in gifs" :key="gif.id">
-        <gif-card :data="gif" class="m-3 w-75" />
+      <div
+        class="col-sm-12 col-lg-3"
+        v-for="sticker in stickers"
+        :key="sticker.id"
+      >
+        <StickerCard :data="sticker" class="m-3 w-75" />
       </div>
     </div>
   </div>
@@ -14,12 +18,12 @@
 
 <script>
 import Loading from "../components/Loading.vue";
-import GifCard from "../components/GifCard.vue";
+import StickerCard from "../components/StickerCard.vue";
 import Search from "../components/Search.vue";
 export default {
-  components: { GifCard, Search, Loading },
+  components: { StickerCard, Search, Loading },
   data: () => ({
-    gifs: {},
+    stickers: {},
     loading: false,
   }),
   created() {
@@ -36,7 +40,7 @@ export default {
         `https://api.giphy.com/v1/stickers/search?q=${search}&api_key=${apiKey}`
       );
 
-      this.gifs = data.data; //gifs toma el valor de data
+      this.stickers = data.data; //gifs toma el valor de data
 
       this.loading = false;
     },
